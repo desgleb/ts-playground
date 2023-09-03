@@ -1,3 +1,5 @@
+// noinspection JSPotentiallyInvalidTargetOfIndexedPropertyAccess
+
 enum Membership {
     Simple,
     Standard,
