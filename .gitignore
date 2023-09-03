@@ -9,3 +9,6 @@ gen
 
 # npm
 node_modules
+
+# production
+dist
