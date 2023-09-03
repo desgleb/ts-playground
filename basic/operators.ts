@@ -1,3 +1,5 @@
+// noinspection JSUnusedAssignment
+
 interface Person {
     name: string;
     age: number;

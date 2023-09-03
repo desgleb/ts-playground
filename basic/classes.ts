@@ -1,3 +1,5 @@
+// noinspection JSUnusedLocalSymbols
+
 class Typescript {
     version: string;
 
