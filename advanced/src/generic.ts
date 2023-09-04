@@ -26,7 +26,8 @@ const merged2 = mergeObjects({model: 'Ford'}, {year: 2010});
 interface ILength {
     length: number
 }
-function withCount<T extends ILength>(value: T): {value: T, count: string} {
+
+function withCount<T extends ILength>(value: T): { value: T, count: string } {
     return {
         value,
         count: `В этом объекте ${value.length} символов`
@@ -39,4 +40,50 @@ function withCount<T extends ILength>(value: T): {value: T, count: string} {
 // console.log(withCount({length: 20}));
 
 // =============================
+// function getObjectValue<T extends object, R extends keyof T>(obj: T, key: R) {
+//     return obj[key];
+// }
+//
+// const person = {
+//     name: 'Gleb',
+//     age: 37,
+//     job: 'Javascript'
+// }
+//
+// console.log(getObjectValue(person, 'name'));
+// console.log(getObjectValue(person, 'age'));
+// console.log(getObjectValue(person, 'job'));
+
+class Collection<T extends string | number | boolean> {
+    constructor(private _items: T[] = []) {
+    };
+
+    add(item: T) {
+        this._items.push(item);
+    }
+
+    remove(item: T) {
+        this._items = this._items.filter(i => i !== item);
+    }
+
+    get items(): T[] {
+        return this._items;
+    }
+}
+
+// const strings = new Collection<string>(['I', 'am', 'strings']);
+// strings.add('!');
+// strings.remove('am');
+// console.log(strings.items);
+//
+// const numbers = new Collection<number>([1, 2, 3]);
+// numbers.add(4);
+// numbers.remove(3);
+// console.log(numbers.items);
+
+// const objects = new Collection([{a: 1}, {b: 2}]);
+// objects.remove({b: 2});
+// console.log(objects.items);
+
+//=============================
 
