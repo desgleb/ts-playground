@@ -17,8 +17,8 @@ console.log(me);
 
 const map = new Map();
 
-const btn = document.querySelector('#btn')!;
+// const btn = document.querySelector('#btn')!;
 
-btn.addEventListener('click', () => {
-    console.log('Btn clicked!');
-});
+// btn.addEventListener('click', () => {
+//     console.log('Btn clicked!');
+// });
